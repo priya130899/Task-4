@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>write a "person" class to hold all the details</h2>
+    <script>
+        class Person {
+            constructor(firstName, lastName, age, address, phoneNumber) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.address = address;
+            this.phoneNumber = phoneNumber;
+        }
+     
+       getFullName() {
+         return `${this.firstName} ${this.lastName}`;
+       }     
+       getAge() {
+         return this.age;
+       }     
+       getAddress() {
+         return this.address;
+       }     
+       getPhoneNumber() {
+         return this.phoneNumber;
+       }     
+       setAddress(newAddress) {
+         this.address = newAddress;
+       }     
+       setPhoneNumber(newPhoneNumber) {
+         this.phoneNumber = newPhoneNumber;
+       }
+     }
+     
+     const person = new Person("Krishna", "Moorthy", 25, "123 KKK st", "1234567891");
+     console.log(person.getFullName()); // Output: "Krishna Moorthy"
+     console.log(person.getAge()); // Output: 25
+     console.log(person.getAddress()); // Output: "123 KKK st."
+     console.log(person.getPhoneNumber()); // Output: "1234567891"
+     person.setAddress("456 Park Ave.");
+     console.log(person.getAddress()); // Output: "456 Park Ave."
+
+     function fullName(person) {
+       return `${person.firstName} ${person.lastName}`;
+     }
+     
+     console.log(fullName(person)); // Output: "Krishna Moorthy"
+    </script>
+</body>
+</html>

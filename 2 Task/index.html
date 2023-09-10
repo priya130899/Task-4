@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>class-circle.md</h2>
+    <script>
+        class Circle {
+            constructor(radius, color) {
+            this.radius = radius;
+            this.color = color;
+        }
+
+    getRadius() {
+        return this.radius;
+    }
+    setRadius(radius) {
+        this.radius = radius;
+    }
+    getColor() {
+        return this.color;
+    }
+    setColor(color) {
+        this.color = color;
+    }
+    toString() {
+        return `Circle[radius=${this.radius},color=${this.color}]`;
+    }
+    getArea() {
+        return Math.PI * this.radius * this.radius;
+    }
+    getCircumference() {
+        return 2 * Math.PI * this.radius;
+    }
+}
+let circle = new Circle(5);
+console.log(circle.getRadius()); // output: 5
+console.log(circle.getColor()); // output: undefined
+console.log(circle.getArea()); // output: 78.53981633974483
+console.log(circle.getCircumference()); // output: 31.41592653589793
+circle.setRadius(7);
+circle.setColor("red");
+console.log(circle.toString()); // output: Circle[radius=7,color=red]
+
+</script>
+</body>
+</html>

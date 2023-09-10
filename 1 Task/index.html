@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Movie.md</h2>
+    <script>
+        class Movie{
+            constructor (title,studio,rating = 'PG') {
+                this.title = title;
+                this.studio = studio;
+                this.rating = rating;
+            }
+        }
+
+        const jawan = new Movie("jawan","LYCA Studio","13")
+        const casinoRoyale = new Movie("Casino Royale", "Eon Productions");
+
+        console.log(jawan)
+        console.log(casinoRoyale)
+
+        function getPG(movies) {
+            return movies.filter(movie => movie.rating === "PG");
+        }
+
+        const movies = [
+            new Movie("Movie 1", "Studio A", "PG"),
+            new Movie("Movie 2", "Studio B", "PG-13"),
+            new Movie("Movie 3", "Studio C", "PG"),
+            new Movie("Movie 4", "Studio D", "R")
+        ];
+
+        const pgMovies = getPG(movies);
+        console.log(pgMovies);
+    </script>
+</body>
+</html>
